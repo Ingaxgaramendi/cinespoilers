@@ -13,8 +13,13 @@
 
 ![lavantanmiento](./docs/Captura%20de%20pantalla%202026-04-01%20163022.png)
 
-## admin de la nueva aplicaicon 
+## admin de la nueva aplicacion 
 
 ![admin de  la aplicacion](./docs/Captura%20de%20pantalla%202026-04-01%20172300.png)
 
+ ## Listado de peliculas agregadas 
+
+![admin de  la aplicacion](./docs/Captura%20de%20pantalla%202026-04-01%20173228.png)
+
  
+
