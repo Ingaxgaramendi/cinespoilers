@@ -1,6 +1,13 @@
-from django.shortcuts import render
-from .models import Movie
+from rest_framework import viewsets
+from .models import Movie, Director
+from .serializers import MovieSerializer, DirectorSerializer
 
-def movie_list(request):
-    movies = Movie.objects.all()
-    return render(request, 'movies/movie_list.html', {'movies': movies})
+
+class DirectorViewSet(viewsets.ModelViewSet):
+    queryset = Director.objects.all()
+    serializer_class = DirectorSerializer
+
+
+class MovieViewSet(viewsets.ModelViewSet):
+    queryset = Movie.objects.filter(is_active=True)
+    serializer_class = MovieSerializer
