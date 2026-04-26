@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Directors</title>
+  </head>
+
+  <body class="bg-dark text-white">
+    <!-- 🔝 NAVBAR -->
+    {% include "movies/navbar.html" %}
+
+    <div class="container mt-4" id="directors"></div>
+
+    <script>
+      fetch("/api/directors/")
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.getElementById("directors");
+
+          data.forEach((d) => {
+            container.innerHTML += `
+        <div class="card bg-secondary text-white mb-3 p-3">
+          <h4>${d.name}</h4>
+          <p>🌍 ${d.nationality || "N/A"}</p>
+        </div>
+      `;
+          });
+        });
+    </script>
+  </body>
+</html>
